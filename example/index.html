@@ -14,7 +14,8 @@
 		content_css: false,
 		editor_css: "themes/advanced/ui.css",
 		popup_css: "themes/advanced/dialog.css",
-		plugins : "lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+		plugins : "deferredplugins,lists,pagebreak,style,layer,table,save,advhr,advimage,advlink,emotions,iespell,inlinepopups,insertdatetime,preview,media,searchreplace,print,contextmenu,paste,directionality,fullscreen,noneditable,visualchars,nonbreaking,xhtmlxtras,template,wordcount,advlist,autosave",
+		deferred_plugins : "autolink",
 
 		// Theme options
 		theme_advanced_buttons1 : "save,newdocument,|,bold,italic,underline,strikethrough,|,justifyleft,justifycenter,justifyright,justifyfull,styleselect,formatselect,fontselect,fontsizeselect",
@@ -29,6 +30,8 @@
 </script>
 <!-- /TinyMCE -->
 
+<!-- Autolink plugin, note the defer attribute, this script won't block other resources in modern browsers -->
+<script defer type="text/javascript" src="plugins/autolink/editor_plugin.js"></script>
 </head>
 <body>
 
