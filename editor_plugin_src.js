@@ -1,5 +1,5 @@
 /**
- * Deferred Plugin Plugin
+ * Deferred Plugins Plugin
  * editor_plugin_src.js
  *
  * Copyright 2011, Wesley Walser
@@ -86,7 +86,7 @@
 				author : 'Wesley Walser',
 				authorurl : 'http://github.com/wwalser',
 				infourl : 'http://github.com/wwalser/tinymce',
-				version : 0.1
+				version : 1.0
 			};
 		}
 	});
