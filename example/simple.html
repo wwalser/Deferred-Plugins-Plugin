@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Full featured example</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- TinyMCE -->
+<script type="text/javascript" src="tiny_mce_advanced.js"></script>
+<script type="text/javascript">
+	tinyMCE.init({
+		// General optionsx
+		mode : "textareas",
+		theme : "simple",
+		plugins : "deferredplugins",
+		deferred_plugins : "autolink"
+	});
+</script>
+<!-- /TinyMCE -->
+
+<!-- Autolink plugin, note the defer attribute, this script won't block other resources in modern browsers -->
+<script defer type="text/javascript" src="plugins/autolink/editor_plugin.js"></script>
+</head>
+<body>
+
+<form method="post" action="#">
+	<div>
+		<h3>Deferred Plugins Example - Simple Theme - Autolink</h3>
+
+		<p>This page is an example instance of TinyMCE with the auto link plugin loaded using a deferred script include.</p>
+		<p>If you view source, notice that there is a defer attribute on the &lt;script&gt; that includes the autolink plugin.</p>
+
+		<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
+		<div>
+			<textarea id="elm1" name="elm1" rows="15" cols="80" style="width: 80%">
+				&lt;p&gt;
+				Try typing a url to see it automatically converted to a link despite the fact that the autolink plugin was loaded after initilization of TinyMCE.
+				&lt;/p&gt;
+			</textarea>
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript">
+if (document.location.protocol == 'file:') {
+	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+}
+</script>
+</body>
+</html>
