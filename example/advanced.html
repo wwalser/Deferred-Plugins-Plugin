@@ -40,7 +40,7 @@
 		<h3>Deferred Plugins Example - Autolink</h3>
 
 		<p>This page is an example instance of TinyMCE with the auto link plugin loaded using a deferred script include.</p>
-		<p>If you view source, notice that there is a defer attribute on the &lt;script&gt; that includes the autolink plugin.</p>
+		<p>If you view source, notice that there is a defer (see: <a href="http://www.w3.org/TR/html401/interact/scripts.html#adef-defer">HTML4 spec</a>) attribute on the &lt;script&gt; that includes the autolink plugin.</p>
 
 		<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
 		<div>
@@ -50,13 +50,6 @@
 				&lt;/p&gt;
 			</textarea>
 		</div>
-
-		<!-- Some integration calls -->
-		<a href="javascript:;" onclick="tinyMCE.get('elm1').show();return false;">[Show]</a>
-
-		<br />
-		<input type="submit" name="save" value="Submit" />
-		<input type="reset" name="reset" value="Reset" />
 	</div>
 </form>
 
