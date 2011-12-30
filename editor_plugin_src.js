@@ -1,7 +1,9 @@
 /**
+ * Deferred Plugin Plugin
  * editor_plugin_src.js
  *
  * Copyright 2011, Wesley Walser
+ * Dual licensed under the MIT or GPL Version 2 licenses.
  */
 
 (function(tinymce) {
