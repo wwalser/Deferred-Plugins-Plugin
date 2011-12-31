@@ -85,7 +85,7 @@
 				longname : 'DeferredPlugins',
 				author : 'Wesley Walser',
 				authorurl : 'http://github.com/wwalser',
-				infourl : 'http://github.com/wwalser/tinymce',
+				infourl : 'http://github.com/wwalser/Deferred-Plugins-Plugin',
 				version : 1.0
 			};
 		}
