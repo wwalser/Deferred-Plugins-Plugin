@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Full featured example</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- TinyMCE -->
+<script type="text/javascript" src="tiny_mce_advanced.js"></script>
+<script type="text/javascript">
+	tinyMCE.init({
+		// General optionsx
+		mode : "textareas",
+		theme : "simple",
+		plugins : "deferredplugins",
+		deferred_plugins : "autolink"
+	});
+</script>
+<!-- /TinyMCE -->
+</head>
+<body>
+
+<form method="post" action="#">
+	<div>
+		<h3>Deferred Plugins Example - Simple Theme - Autolink</h3>
+		<p>This example shows how one could use the Deferred Plugins Plugin to create a page where plugins aren't loaded until they are actually needed by the user. An example of this would be a custom toolbar where some functionality isn't exposed by default but a more advanced version can be enabled by the user. The author of such a toolbar could lower page load time by deferring the loading of plugins until the user actually enabled the more advanced functionality.</p>
+		<p>On this page the autolink plugin is loaded on demand, try typing a url into the TinyMCE instance below and notice that it's not auto linked. Then click the link below to enable auto linking.</p>
+		<p><a id="delayedLoad" href="#">Load Autolink plugin</a>
+		<!-- Gets replaced with TinyMCE, remember HTML in a textarea should be encoded -->
+		<div>
+			<textarea id="elm1" name="elm1" rows="15" cols="80" style="width: 80%">
+				&lt;p&gt;
+				Try typing a url to see it automatically converted to a link despite the fact that the autolink plugin was loaded after initilization of TinyMCE.
+				&lt;/p&gt;
+			</textarea>
+		</div>
+	</div>
+</form>
+
+<script type="text/javascript">
+if (document.location.protocol == 'file:') {
+	alert("The examples might not work properly on the local file system due to security settings in your browser. Please use a real webserver.");
+}
+</script>
+<script defer type="text/javascript" src="loadPlugin.js"></script>
+</body>
+</html>
